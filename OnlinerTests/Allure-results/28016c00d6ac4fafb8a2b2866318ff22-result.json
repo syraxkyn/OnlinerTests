@@ -1,0 +1,67 @@
+{
+  "uuid": "c1ff7692-d627-49b6-87aa-cd912d61c44d-tr-0-1007",
+  "historyId": "OnlinerTests.Tests.Test7",
+  "fullName": "OnlinerTests.Tests.Test7",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OnlinerTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test7"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests"
+    }
+  ],
+  "links": [],
+  "name": "Test7",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#recaptcha-anchor > div.recaptcha-checkbox-border\"}\n  (Session info: chrome=108.0.5359.125)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OnlinerTests.Page.OnlinerCatalogPage.Login(OnlinerUser user) in E:\\тестирование\\OnlinerTests\\OnlinerTests\\Page\\OnlinerCatalogPage.cs:line 64\r\n   at OnlinerTests.Tests.Test7() in E:\\тестирование\\OnlinerTests\\OnlinerTests\\UnitTest1.cs:line 114"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Test7",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#recaptcha-anchor > div.recaptcha-checkbox-border\"}\n  (Session info: chrome=108.0.5359.125)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OnlinerTests.Page.OnlinerCatalogPage.Login(OnlinerUser user) in E:\\тестирование\\OnlinerTests\\OnlinerTests\\Page\\OnlinerCatalogPage.cs:line 64\r\n   at OnlinerTests.Tests.Test7() in E:\\тестирование\\OnlinerTests\\OnlinerTests\\UnitTest1.cs:line 114"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "8ab717bc0dfe4398a369df91a300732b-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1671346870123,
+      "stop": 1671346873480
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1671346870122,
+  "stop": 1671346873484
+}

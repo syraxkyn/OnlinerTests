@@ -1,0 +1,65 @@
+{
+  "uuid": "0181c0ff-479a-42b8-b5a4-80db88fc701b-tr-0-1007",
+  "historyId": "OnlinerTests.Tests.Test7",
+  "fullName": "OnlinerTests.Tests.Test7",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OnlinerTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test7"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests"
+    }
+  ],
+  "links": [],
+  "name": "Test7",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Test7"
+  },
+  "stage": "finished",
+  "description": "Login with invalid credentials\n",
+  "steps": [
+    {
+      "name": "Test7",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "c296a1ccfe9448be9fc69a50d0d031c4-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1671347115271,
+      "stop": 1671347121759
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1671347115270,
+  "stop": 1671347121761
+}

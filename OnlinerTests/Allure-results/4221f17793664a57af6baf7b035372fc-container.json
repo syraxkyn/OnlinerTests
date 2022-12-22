@@ -1,0 +1,28 @@
+{
+  "uuid": "68bcecf1-8eb7-4b13-ac1f-d24cae306899-tc-0-1000",
+  "name": "OnlinerTests.Tests.Test7",
+  "children": [
+    "60524fbd-c23d-449b-b8a7-9b9e83d453ab-tr-0-1007"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1671346895545,
+      "stop": 1671346895545
+    }
+  ],
+  "afters": [],
+  "links": [],
+  "start": 1671346888369,
+  "stop": 1671346895570
+}

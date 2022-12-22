@@ -1,0 +1,64 @@
+{
+  "uuid": "60524fbd-c23d-449b-b8a7-9b9e83d453ab-tr-0-1007",
+  "historyId": "OnlinerTests.Tests.Test7",
+  "fullName": "OnlinerTests.Tests.Test7",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#5"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OnlinerTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test7"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests"
+    }
+  ],
+  "links": [],
+  "name": "Test7",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Test7"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Test7",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "9e0fbbaad94b48c3bebc07eb92108fb0-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1671346888373,
+      "stop": 1671346895548
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1671346888372,
+  "stop": 1671346895551
+}
