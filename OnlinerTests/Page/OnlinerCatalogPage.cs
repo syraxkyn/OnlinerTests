@@ -29,12 +29,23 @@ namespace OnlinerTests.Page
         public static By _laptopCatalogName = By.CssSelector("#container > div > div > div > div > div.catalog-content.js-scrolling-area > div.product.product_details.b-offers.js-product > div > div.catalog-masthead > h1");
         public static By _laptopWishName = By.CssSelector("#container > div.cart-content > div > div > div > div > div.cart-form__body > div > div.cart-form__offers > div > div > div.cart-form__offers-item.cart-form__offers-item_secondary > div > div.cart-form__offers-part.cart-form__offers-part_data > div.cart-form__description.cart-form__description_primary.cart-form__description_base-alter.cart-form__description_font-weight_semibold.cart-form__description_condensed-other > a");
 
+        public static By _location = By.CssSelector("#container > div.cart-content > div > div > div > div > div.cart-form__body > div > div.cart-form__description.cart-form__description_primary.cart-form__description_base-alter.cart-form__description_compass.cart-form__description_extended-additional > div.cart-form__description.cart-form__description_primary.cart-form__description_base-alter.cart-form__description_condensed-alter > a");
+
         public static By _authButton = By.CssSelector("#userbar > div:nth-child(1) > div > div > div.auth-bar__item.auth-bar__item--text");
         public static By _loginTextBox = By.CssSelector("#auth-container > div > div.auth-form__body > div > form > div:nth-child(1) > div > div.auth-form__row.auth-form__row_condensed-alter > div > div > div > div > input");
         public static By _passwordTextBox = By.CssSelector("#auth-container > div > div.auth-form__body > div > form > div:nth-child(2) > div > div > div > div > input");
         public static By _enterButton = By.CssSelector("#auth-container > div > div.auth-form__body > div > form > div.auth-form__control.auth-form__control_condensed-additional > button");
         public static By _captchaCheckbox = By.CssSelector("#recaptcha-anchor > div.recaptcha-checkbox-border");
         public static By _invalidCredentialsText = By.CssSelector("#auth-container > div > div.auth-form__body > div > form > div.auth-form__line.auth-form__line_condensed > div");
+
+        public static By _supportButton = By.CssSelector("body > div.layout-container > footer > div > div > div > div.footer-style__part.footer-style__part_1 > ul > li:nth-child(10) > a");
+        public static By _nametextBox = By.CssSelector("#id_name");
+        public static By _mailTextBox = By.CssSelector("#id_email");
+        public static By _selectProblem = By.CssSelector("#id_type");
+        public static By _problem = By.CssSelector("#id_project");
+        public static By _titleProblem = By.CssSelector("#id_subject");
+        public static By _problemDescription = By.CssSelector("#id_description");
+        public static By _sendMessageButton = By.CssSelector("#phone_form_ > center > div > input[type=image]");
 
         public static By _vkontakteAuthButton = By.CssSelector("#userbar > div:nth-child(1) > div > div > div.auth-bar__item.auth-bar__item--vk-alter");
         public static By _vkontakteLoginTextBox = By.CssSelector("#login_submit > div > div > input:nth-child(7)");
@@ -79,10 +90,33 @@ namespace OnlinerTests.Page
             _driver.FindElement(_incrementButton).Click();
             return this;
         }
+        public OnlinerCatalogPage OpenSupport()
+        {
+            _driver.FindElement(_supportButton).Click();
+            return this;
+        }
+
+        public OnlinerCatalogPage SendSupportData(string name,string mail,string problemName,string problemLoc,string titleProblem,string problemDescription)
+        {
+            _driver.FindElement(_nametextBox).SendKeys("Android");
+            _driver.FindElement(_mailTextBox).SendKeys("ash03@tut.by");
+            _driver.FindElement(_selectProblem).SendKeys("Я");
+            _driver.FindElement(_problem).SendKeys("Каталог");
+            _driver.FindElement(_titleProblem).SendKeys("Problem small");
+            _driver.FindElement(_problemDescription).SendKeys("Problem big");
+            _driver.FindElement(_sendMessageButton).Click();
+            return this;
+        }
 
         public OnlinerCatalogPage DecrementOrderCount()
         {
             _driver.FindElement(_decrementButton).Click();
+            return this;
+        }
+
+        public OnlinerCatalogPage RemoveFromWishList()
+        {
+            _driver.FindElement(By.CssSelector("#container > div.cart-content > div > div > div > div > div.cart-form__body > div > div.cart-form__offers > div > div > div.cart-form__offers-item.cart-form__offers-item_secondary > div > div.cart-form__offers-part.cart-form__offers-part_action > div > div.cart-form__offers-part.cart-form__offers-part_remove > div"));
             return this;
         }
 

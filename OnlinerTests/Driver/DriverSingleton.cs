@@ -19,7 +19,7 @@ namespace OnlinerTests.Driver
         {
             if (_appConfiguration == null)
             {
-                var builder = new ConfigurationBuilder().AddJsonFile(@"E:\тестирование\OnlinerTests\OnlinerTests\config.json");
+                var builder = new ConfigurationBuilder().AddJsonFile(@"E:\testing\OnlinerTests\OnlinerTests\config.json");
                 _appConfiguration = builder.Build();
             }
             var driverName = _appConfiguration["driver"];
@@ -30,7 +30,7 @@ namespace OnlinerTests.Driver
                     case "chrome":
                         {
                             var options = new ChromeOptions();
-                            driver = new ChromeDriver(@"D:\ChromeDriver", options);
+                            driver = new ChromeDriver(@"E:\ChromeDriver108", options);
                             break;
                         }
                     default:

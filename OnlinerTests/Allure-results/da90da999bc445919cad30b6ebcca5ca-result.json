@@ -1,0 +1,68 @@
+{
+  "uuid": "74472a50-c1e3-44a7-a038-70cb62474d24-tr-0-1004",
+  "historyId": "OnlinerTests.Tests.Test4",
+  "fullName": "OnlinerTests.Tests.Test4",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OnlinerTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test4"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests"
+    }
+  ],
+  "links": [],
+  "name": "Test4",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#container > div > div > div > div > div.catalog-content.js-scrolling-area > div.product.product_details.b-offers.js-product > main > div > div > aside > div:nth-child(1) > div.product-aside__offers > div.product-aside__offers-list > div.product-aside__offers-item.product-aside__offers-item_primary > div.product-aside__control.product-aside__control_condensed-additional > a.button-style.button-style_base-alter.button-style_primary.product-aside__button.product-aside__button_narrow.product-aside__button_cart.button-style_expletive\"}\n  (Session info: chrome=108.0.5359.125)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OnlinerTests.Page.OnlinerCatalogPage.AddLaptopToWishList() in E:\\testing\\OnlinerTests\\OnlinerTests\\Page\\OnlinerCatalogPage.cs:line 116\r\n   at OnlinerTests.Tests.Test4() in E:\\testing\\OnlinerTests\\OnlinerTests\\UnitTest1.cs:line 71"
+  },
+  "stage": "finished",
+  "description": "Entering the number of laptops\n",
+  "steps": [
+    {
+      "name": "Test4",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#container > div > div > div > div > div.catalog-content.js-scrolling-area > div.product.product_details.b-offers.js-product > main > div > div > aside > div:nth-child(1) > div.product-aside__offers > div.product-aside__offers-list > div.product-aside__offers-item.product-aside__offers-item_primary > div.product-aside__control.product-aside__control_condensed-additional > a.button-style.button-style_base-alter.button-style_primary.product-aside__button.product-aside__button_narrow.product-aside__button_cart.button-style_expletive\"}\n  (Session info: chrome=108.0.5359.125)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.FindElement(String mechanism, String value)\r\n   at OpenQA.Selenium.By.<.ctor>b__11_0(ISearchContext context)\r\n   at OpenQA.Selenium.By.FindElement(ISearchContext context)\r\n   at OpenQA.Selenium.WebDriver.FindElement(By by)\r\n   at OnlinerTests.Page.OnlinerCatalogPage.AddLaptopToWishList() in E:\\testing\\OnlinerTests\\OnlinerTests\\Page\\OnlinerCatalogPage.cs:line 116\r\n   at OnlinerTests.Tests.Test4() in E:\\testing\\OnlinerTests\\OnlinerTests\\UnitTest1.cs:line 71"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ef33e76e31e144d29fab0afff5610677-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1671686617642,
+      "stop": 1671686624797
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1671686617642,
+  "stop": 1671686624801
+}

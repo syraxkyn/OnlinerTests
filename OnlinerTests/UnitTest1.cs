@@ -24,21 +24,10 @@ namespace OnlinerTests
             logger.Info("Starting application.");
             _driver = DriverSingleton.GetDriver();
             _driver.Manage().Window.Maximize();
-            _pageConfiguration = new ConfigurationBuilder().AddJsonFile(@"E:\тестирование\OnlinerTests\OnlinerTests\config.json", optional: true, reloadOnChange: true).Build();
+            _pageConfiguration = new ConfigurationBuilder().AddJsonFile(@"E:\testing\OnlinerTests\OnlinerTests\config.json", optional: true, reloadOnChange: true).Build();
             catalogPage = new OnlinerCatalogPage(_driver, _pageConfiguration);
         }
-
-        [Test(Description ="Open catalog page")]
-        [AllureSeverity(Allure.Commons.SeverityLevel.critical)]
-        [AllureOwner("Andrey")]
         public void Test1()
-        {
-            catalogPage.OpenPage();
-            Assert.Pass();
-        }
-
-        [Test(Description = "Checking add a laptop to the cart")]
-        public void Test2()
         {
             catalogPage.OpenPage();
             catalogPage.OpenLaptopCatalog();
@@ -50,11 +39,7 @@ namespace OnlinerTests
             //By laptop = By.CssSelector("#container > div.cart-content > div > div > div > div > div.cart-form__body > div > div.cart-form__offers > div > div > div.cart-form__offers-item.cart-form__offers-item_secondary > div > div.cart-form__offers-part.cart-form__offers-part_data > div.cart-form__description.cart-form__description_primary.cart-form__description_base-alter.cart-form__description_font-weight_semibold.cart-form__description_condensed-other > a");
             Assert.AreEqual(laptopCatalogName, laptopWishList);
         }
-
-        //тест на проверку фильтра
-        [Test(Description ="Filter testing")]
-        [Parallelizable]
-        public void Test3()
+        public void Test2()
         {
             catalogPage.OpenPage();
             catalogPage.OpenLaptopCatalog();
@@ -62,11 +47,7 @@ namespace OnlinerTests
             By asusList = By.CssSelector("#container > div > div > div > div > div.catalog-content.js-scrolling-area > div.schema-grid__wrapper > div.schema-grid > div.js-schema-results.schema-grid__center-column");
             Assert.IsTrue(_driver.FindElement(asusList).Text.Contains("ASUS"));
         }
-
-        //тест на ввод количества значений
-        [Test(Description = "Entering the number of laptops")]
-        [Parallelizable]
-        public void Test4()
+        public void Test3()
         {
             catalogPage.OpenPage();
             catalogPage.OpenLaptopCatalog();
@@ -75,10 +56,23 @@ namespace OnlinerTests
             catalogPage.ChangeOrderCount(4);
             Thread.Sleep(3000);
             string textBoxCount = _driver.FindElement(OnlinerCatalogPage._countText).Text;
+
             Assert.AreEqual("14", textBoxCount.Substring(0,textBoxCount.IndexOf(' ')));
         }
-        //инкремент-декремент
-        [Test(Description ="Increment/Decrement count of laptop")]
+
+        public void Test4()
+        {
+            catalogPage.OpenPage();
+            catalogPage.OpenLaptopCatalog();
+
+            catalogPage.AddLaptopToWishList();
+            catalogPage.OpenWishList();
+
+            catalogPage.DecrementOrderCount();
+            string textBoxCount = _driver.FindElement(OnlinerCatalogPage._countText).Text;
+            Assert.AreEqual("2", textBoxCount.Substring(0, textBoxCount.IndexOf(' ')));
+        }
+
         public void Test5()
         {
             catalogPage.OpenPage();
@@ -92,30 +86,48 @@ namespace OnlinerTests
             string textBoxCount = _driver.FindElement(OnlinerCatalogPage._countText).Text;
             Assert.AreEqual("2", textBoxCount.Substring(0, textBoxCount.IndexOf(' ')));
         }
-        //проверка на вход
-        [Test(Description = "Login with valid credentials via VK")]
-        [Parallelizable]
+
         public void Test6()
         {
             catalogPage.OpenPage();
-            OnlinerUser CurrentUser = new OnlinerUser();
-            CurrentUser.PhoneNumber = _pageConfiguration["phonenumber"];
-            CurrentUser.Password = _pageConfiguration["password"];
-            catalogPage.LoginViaVK(CurrentUser);
-            Assert.IsTrue(_driver.FindElement(OnlinerCatalogPage._profileImage).Displayed);
+            catalogPage.OpenSupport();
+            catalogPage.SendSupportData("Android", "ash03@tut.by", "Я", "Каталог", "small", "big");
+            Assert.AreEqual(_driver.FindElement(By.CssSelector("#main > div > h1 > i")).Text,"Заявка была принята");
         }
-        [Test(Description ="Login with invalid credentials")]
+        
         public void Test7()
         {
             catalogPage.OpenPage();
-            OnlinerUser CurrentUser = new OnlinerUser();
-            CurrentUser.PhoneNumber = _pageConfiguration["phonenumber"];
-            CurrentUser.Password = _pageConfiguration["password"];
-            catalogPage.Login(CurrentUser);
-            Assert.IsTrue(_driver.FindElement(OnlinerCatalogPage._invalidCredentialsText).Displayed);
+            catalogPage.OpenWishList();
+            Assert.AreEqual("Минск", _driver.FindElement(OnlinerCatalogPage._location).Text);
         }
 
-        [TearDown]
+        public void Test8()
+        {
+            catalogPage.OpenPage();
+            catalogPage.OpenWishList();
+            string laptopCatalogName = _driver.FindElement(OnlinerCatalogPage._laptopCatalogName).Text;
+            catalogPage.AddLaptopToWishList();
+            catalogPage.OpenWishList();
+            string laptopWishList = _driver.FindElement(OnlinerCatalogPage._laptopWishName).Text;
+            Assert.AreEqual(_driver.FindElement(By.CssSelector("#container > div.cart-content > div > div > div > div > div.cart-form__body > div > div.cart-message")).Text,"Ваша корзина пуста");
+        }
+
+        public void Test9()
+        {
+            catalogPage.OpenPage();
+            catalogPage.OpenLaptopCatalog();
+            string laptopCatalogName = _driver.FindElement(OnlinerCatalogPage._laptopCatalogName).Text;
+            catalogPage.AddLaptopToWishList();
+            catalogPage.OpenWishList();
+            catalogPage.ChangeOrderCount();
+            catalogPage.OpenLaptopCatalog();
+            catalogPage.AddLaptopToWishList();
+
+            //By laptop = By.CssSelector("#container > div.cart-content > div > div > div > div > div.cart-form__body > div > div.cart-form__offers > div > div > div.cart-form__offers-item.cart-form__offers-item_secondary > div > div.cart-form__offers-part.cart-form__offers-part_data > div.cart-form__description.cart-form__description_primary.cart-form__description_base-alter.cart-form__description_font-weight_semibold.cart-form__description_condensed-other > a");
+            Assert.AreEqual(laptopCatalogName, laptopWishList);
+        }
+
         public void Cleanup()
         {
             DriverSingleton.CloseDriver();

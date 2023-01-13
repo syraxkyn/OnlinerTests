@@ -1,0 +1,44 @@
+{
+  "uuid": "84639dfe-eacf-4d0d-85d3-8b1fcffd0230-tc-0-1000",
+  "name": "OnlinerTests.Tests.Test3",
+  "children": [
+    "6f400bb1-52b3-451e-b9bc-560381a3645d-tr-0-1003"
+  ],
+  "befores": [
+    {
+      "name": "Setup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1671686566065,
+      "stop": 1671686566065
+    }
+  ],
+  "afters": [
+    {
+      "name": "Cleanup",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1671686566065,
+      "stop": 1671686566065
+    }
+  ],
+  "links": [],
+  "start": 1671686558962,
+  "stop": 1671686566107
+}

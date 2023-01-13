@@ -1,0 +1,68 @@
+{
+  "uuid": "6f400bb1-52b3-451e-b9bc-560381a3645d-tr-0-1003",
+  "historyId": "OnlinerTests.Tests.Test3",
+  "fullName": "OnlinerTests.Tests.Test3",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "HOME-PC"
+    },
+    {
+      "name": "package",
+      "value": "OnlinerTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Test3"
+    },
+    {
+      "name": "testClass",
+      "value": "Tests"
+    }
+  ],
+  "links": [],
+  "name": "Test3",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span class=\"i-checkbox__faux\"></span> is not clickable at point (278, 922). Other element would receive the click: <div class=\"schema-filter-button__state schema-filter-button__state_initial schema-filter-button__state_disabled schema-filter-button__state_control\" data-bind=\"css: {'schema-filter-button__state_control': $root.states.control,\n                                  'schema-filter-button__state_animated': $root.states.animated}\">...</div>\n  (Session info: chrome=108.0.5359.125)",
+    "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at OnlinerTests.Tests.Test3() in E:\\testing\\OnlinerTests\\OnlinerTests\\UnitTest1.cs:line 60"
+  },
+  "stage": "finished",
+  "description": "Filter testing\n",
+  "steps": [
+    {
+      "name": "Test3",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <span class=\"i-checkbox__faux\"></span> is not clickable at point (278, 922). Other element would receive the click: <div class=\"schema-filter-button__state schema-filter-button__state_initial schema-filter-button__state_disabled schema-filter-button__state_control\" data-bind=\"css: {'schema-filter-button__state_control': $root.states.control,\n                                  'schema-filter-button__state_animated': $root.states.animated}\">...</div>\n  (Session info: chrome=108.0.5359.125)",
+        "trace": "   at OpenQA.Selenium.WebDriver.UnpackAndThrowOnError(Response errorResponse, String commandToExecute)\r\n   at OpenQA.Selenium.WebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebDriver.InternalExecute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Execute(String commandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.WebElement.Click()\r\n   at OnlinerTests.Tests.Test3() in E:\\testing\\OnlinerTests\\OnlinerTests\\UnitTest1.cs:line 60"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "76c139cdce08456f9b609b824c091be4-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1671686558965,
+      "stop": 1671686566072
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1671686558964,
+  "stop": 1671686566080
+}
